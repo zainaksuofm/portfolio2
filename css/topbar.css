@@ -1,0 +1,38 @@
+
+.topBar{
+    padding: 10px;
+    width: 100vw;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: solid black 1px;
+}
+
+.options{
+    margin-left: 10%;
+    margin-right: 50%;
+    display: flex;
+    gap: 10px;
+}
+    
+.options button {
+    flex: 1;
+    background: none;
+    border: none;
+}
+
+.topBar .options button {
+    transition: background-color;
+}
+
+.topBar .options button.active {
+    background-color: #F9F0F9;
+    border: solid black 1px;
+    font-weight: bold;
+}
+
+.options button:hover {
+    background-color: #F9F0F9;
+}

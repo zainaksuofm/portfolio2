@@ -1,0 +1,326 @@
+
+h1, h2, h3, h4 { font-family: 'Bricolage Grotesque', arial, serif; }
+p, li, td, summary { font-family: 'Instrument Sans', arial, serif; }
+
+html, body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+  @keyframes header {
+    from {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+  
+
+#scrollToTop {
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+    width: 80px;
+    height: 80px;
+    background-color: #00000079;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+    animation: fade-in 1.3s ease-out;
+}
+
+#scrollToTop:hover {
+    opacity: 1;
+}
+
+.hr.solid {
+    border-top: 1px solid black;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #dadada;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black;
+  }
+
+  .video-background {
+    background-repeat: repeat;
+    position: 0 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .video-background video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 150vh;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  
+
+.boxContainer {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); 
+    width: 1000px;
+    margin: 10% auto;
+    align-items: stretch; /* Ensures all childresn stretch */
+    height: 450px;
+}
+
+
+.cases{
+    animation: fade-in 0.3s ease-out;
+    border: 1px solid black;
+    padding: 20px 60px 20px 60px;
+    margin: 10% 15% 0% 15%;
+    width: 1000px;
+    margin: 10% auto;
+    background-color: white;
+}
+
+.cases button{
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: white;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.cases button:hover{
+    border: 2px solid black;
+    background-color: #F9F0F9;
+}
+
+#rightButton{
+    justify-self: right;
+    margin-left: 70%;
+}
+
+.intro{
+    display: grid;
+    padding: 20px;
+}
+
+.introInfo{
+    grid-column: 2;
+    align-content: center;
+}
+
+.introInfo li{
+    padding: 10px;
+    list-style: square;
+}
+
+.problemStatement{
+    background-color: #F9F0F9;
+    border: 1px solid black;
+    margin: 5% 15% 5% 15%;
+    padding: 20px 60px 20px 60px;
+}
+
+.texts{
+    margin: 5% 15% 5% 15%;
+}
+
+.texts figure{
+    display: flex;
+    justify-content: center;
+}
+
+.texts img{
+    width: 800px;
+}
+
+.embeds{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+}
+
+.teamClient{
+    margin: 5% 15% 5% 15%;
+}
+
+.leftBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    height: 100%; /* Ensures it takes up full height of parent */
+    overflow: auto; /* Ensures inner content doesn't overflow */
+}
+
+.leftBox h4, .leftBox p{
+    margin: 5px;
+}
+
+.caseOne, .caseTwo, .caseThree {
+    display: flex;
+    align-items: center;
+    border: solid black 1px;
+    background-color: white;
+    box-sizing: border-box; /* Ensures padding doesn't increase size */
+    flex-grow: 1;
+    min-height: 30%;
+}
+
+.caseOne, .caseTwo{
+    margin-bottom: 10px;
+}
+
+.caseOne img, .caseTwo img, .caseThree img {
+    max-width: 100px;
+    height: auto; /* Keeps aspect ratio */
+}
+
+.caseOne:hover, .caseTwo:hover, .caseThree:hover {
+    border: solid black 2px;
+    background-color: #F9F0F9;
+}
+
+.welcomeBox, .passionBox, .educationBox, .experienceBox, .toolsBox{
+    grid-row: 1;
+    flex-shrink: 1;
+    grid-column: 1;
+    padding: 40px 40px; 
+    width: auto;
+    overflow: auto;
+    background-color: white;
+    border: solid black 1px;
+}
+
+.welcomeBox{
+    align-content: center;
+    padding-right: 100px;
+    display: grid;
+}
+
+.passionBox, .currently{
+    padding-right: 50px;
+}
+
+.welcomeBox img{
+    width: 150px;
+}
+
+.mediaLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 30px;
+    background: none;
+    padding: 10px;
+    max-width: 100%;
+}
+
+.mediaLinks a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    flex: 1 1 100px;
+}
+
+.mediaLinks figure {
+    margin: 0;
+    align-self: center;
+}
+
+.mediaLinks figure img {
+    max-width: 40px;
+    height: auto;
+}
+
+.mediaLinks button {
+    width: 100%;
+    background: none;
+    border: none;
+}
+
+.educationBox li{
+    margin-bottom: 10px;
+}
+.currently{
+    padding-bottom: 10px;
+}
+
+.coursesTaken{
+    ul{
+      display: flex;
+      flex-flow: wrap;
+      list-style: none;
+      padding-left: 0px;
+      gap: 5px;
+      li{
+        text-align: center;
+        background-color: #F9F0F9;
+        padding: 10px;
+      }
+    }
+}
+
+.experienceBox td {
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(odd) {
+    background-color: #F9F0F9;
+}
+
+.toolsBox{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.toolsBox ul{
+      display: flex;
+      flex-flow: wrap;
+      list-style: none;
+      padding-left: 0px;
+      gap: 5px;
+      li{
+        text-align: center;
+        background-color: #F9F0F9;
+        padding: 10px;
+      }
+}
