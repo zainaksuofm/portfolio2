@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/topbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Instrument+Sans' rel='stylesheet' type='text/css'>
+</head>
+<style>
+    h1 {
+     font-size: 2.488rem;
+    }
+    h2{
+     font-size: 2.074rem;
+    }
+    h3{
+     font-size: 1.728rem;
+    }
+    h4{
+     font-size: 1.44rem;
+    }
+    p{
+     font-size: 1rem;
+     line-height: 130%;
+    }
+</style>
+
+<body>
+    <div class="topBar">
+        <div class="options">
+            <button onclick="goToIndex('welcome')" style="cursor: pointer;"><p>welcome</p></button>
+            <button onclick="goToIndex('passion')" style="cursor: pointer;"><p>passion</p></button>
+            <button onclick="goToIndex('education')" style="cursor: pointer;"><p>education</p></button>
+            <button onclick="goToIndex('experience')" style="cursor: pointer;"><p>experience</p></button>
+            <button onclick="goToIndex('tools')" style="cursor: pointer;"><p>tools</p></button>
+        </div>
+    </div>
+    
+    
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="images/Untitled design.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <div class="cases">
+        <button onclick="location.href='index.html';" style="cursor: pointer;"> ← Back Home </button>
+        <button id="rightButton" onclick="location.href='caseThree.html';" style="cursor: pointer;"> Next Project → </button>
+
+        <div class="intro">
+            <div>
+                <h1>Neurodivergency on Campus</h1>
+                <p><b>Exploratory qualitative interviews.</b></p>
+            </div>
+            <div class="introInfo">
+                <ul>
+                    <li><b>Span:</b> September to October, 2024</li>
+                    <li><b>Status:</b> Completed</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="solid">
+        
+        <div class="problemStatement">
+            <h3>Problem Statement</h3>
+            <p>Neurodivergent students often face barriers in accessing appropriate resources, which can impact their well-being and academic success.</p>
+        </div>
+
+        <div class="teamClient">
+            <h3>Goal of Study</h3>
+            <p> This study seeked to <b>explore challenges faced by neurodivergent students</b>, as well as analyze the effectiveness of current mental and academic support services already in place at the University of Michigan.</p>
+            <h3>Methodology</h3>
+            <p><b>Photo-elicitation</b> (the use of visual stimuli to capture information) was used to conduct qualitative interviews. Thematic analyses of participant transcripts were then coded into an affinity diagram.</p>
+        </div>
+
+        <hr class="solid">
+
+        <div class="texts">
+            <h3>The Interview Process</h3>
+            <p>Five participants consented to virtual 45-minute interviews.
+                Using an <a href="https://docs.google.com/document/d/1oNDgtodEwHQhFgt0T2LGZIw0xMfEaTfr/edit">interview guide made on Google Docs</a>, and a curated set of ten photos on academic and social life, 
+                I prompted the participants to reflect on their personal experiences and challenges.
+            </p>
+            <h3>Coding and Analysis</h3>
+            <p>Interview transcripts were then reviewed using thematic analysis, i.e examining data to identify reoccuring themes. 
+                Coding, or organizing data sets with labels, was done through Google Docs. 
+                Key patterns and themes were later organized into an <b>affinity diagram, shown below.</b>
+                This visual map organized the data into three overarching themes that each reference direct quotations from the interviewees.</p>
+            <div class="embeds">
+                <iframe style="border: 1px solid rgba(1, 1, 1, 1); box-shadow: 6px 6px 0px 0px #C4B2CF" width="800" height="400" src="https://miro.com/app/board/uXjVLQsAU-k=/?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+            <h3>Findings</h3>
+            <p>Participants reported depression and anxiety, worsened by challenges adjusting to the large, overstimulating campus. Several faced difficulties 
+                with traditional talk therapy provided by the campus, feeling the need to "mask”, despite the therapeutic environment, due to therapists' limited understanding of neurodivergence.
+                Executive dysfunction, communication barriers, and the absence of supportive communities further compounded their struggles. 
+            </p>
+            <h3>Conclusion</h3>
+            <p>Given limitations of time, and the conceptual nature of this project, the findings are not suitable for statistical analysis due to the sample size and lack of diversity (e.g., all participants were female). 
+                However, the study successfully surfaced qualitative insights into how neurodivergent students navigate their environments and highlighted unmet needs in their academic and social lives. 
+                These findings provided important insights that can inform future initiatives to improve resources and, most importantly, <b>foster a more supportive experience for neurodivergent students.</b></p>
+        </div>
+    </div>
+    <button id="scrollToTop" onclick="scrollToTop()">&#8679;</button>
+
+    <script>
+        window.onscroll = function() {
+            let button = document.getElementById("scrollToTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                button.style.display = "block"; // Show button after scrolling 300px
+            } else {
+                button.style.display = "none"; // Hide button when near the top
+            }
+        };
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        </script>
+        
+    <script>
+        function goToIndex(section) {
+            window.location.href = `index.html#${section}`;
+        }
+    </script>        
+</body>
+</html>

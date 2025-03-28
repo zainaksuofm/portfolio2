@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/topbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Instrument+Sans' rel='stylesheet' type='text/css'>
+</head>
+<style>
+    h1 {
+     font-size: 2.488rem;
+    }
+    h2{
+     font-size: 2.074rem;
+    }
+    h3{
+     font-size: 1.728rem;
+    }
+    h4{
+     font-size: 1.44rem;
+    }
+    p{
+     font-size: 1rem;
+     line-height: 130%;
+    }
+</style>
+
+<body>
+    <div class="topBar">
+        <div class="options">
+            <button onclick="goToIndex('welcome')" style="cursor: pointer;"><p>welcome</p></button>
+            <button onclick="goToIndex('passion')" style="cursor: pointer;"><p>passion</p></button>
+            <button onclick="goToIndex('education')" style="cursor: pointer;"><p>education</p></button>
+            <button onclick="goToIndex('experience')" style="cursor: pointer;"><p>experience</p></button>
+            <button onclick="goToIndex('tools')" style="cursor: pointer;"><p>tools</p></button>
+        </div>
+    </div>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="images/Untitled design.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <div class="cases">
+        <button onclick="location.href='index.html';" style="cursor: pointer;"> ← Back Home </button>
+        <button id="rightButton" onclick="location.href='caseOne.html';" style="cursor: pointer;"> First Project → </button>
+
+        <div class="intro">
+            <div>
+                <h1>ParkSwift</h1>
+                <p><b>Designing a filtering system for a mobile app prototype.</b></p>
+            </div>
+            <div class="introInfo">
+                <ul>
+                    <li><b>Span:</b> October to March, 2023</li>
+                    <li><b>Status:</b> Completed</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="solid">
+
+        <div class="problemStatement">
+            <h3>Problem Statement</h3>
+            <p>Users had to brute search through postings to find the offers they desire.</p>
+        </div>
+
+
+        <div class="teamClient">
+            <h3>Team: Seven UX students at the University of Michigan.</h3>
+            <p>VOID Technology is a student organization that brings student developers, designers, and product managers into teams to create an online product. In this team project, our goal was to build a mobile app for renting and selling parking spaces in the city Ann Arbor, Michigan.</p>
+            <h3>Product: An app for renting and selling parking spaces.</h3>
+            <p>ParkSwift is a student-built mobile app that lets people rent and sell parking spaces in Ann Arbor, Michigan. The actual app is currently still under development, however prototyping is complete.</p>
+            <h3>My Key Role: A faceted design system.</h3>
+            <p>My team initially worked together to setup the wireframe, and later branched out until each designer had their own individual component to focus on. Through a brief assessment of possible user needs, it was evident that a dedicated filtering page was necessary, and I took up the challenge of designing one.</p>
+        </div>
+
+        <hr class="solid">
+
+        <div class="texts">
+            <h3>Planning</h3>
+            <p>An <b>information architecture</b> was first created to best divide user needs, shown below.</p>
+            <figure>
+                <img src ="images/psInfoArchitecture.svg" alt="...">
+            </figure>
+
+            <h3>Design Iterations</h3>
+            <p>The <b>first iteration</b>, as part of the team wireframe, focused on ensuring all filter options were visible and accessible, without overwhelming users with visual clutter or excessive interactions.
+            </br></br>
+                A significant portion of this iteration was deciding the best input methods for users. A common scenario I would imagine is that a user could either want to select "Up to $10 per hour", or "Less than $300 per month”, and in either accord I had to create a design that addressed both needs.
+            </p>
+            <figure>
+                <img src ="images/psIterationOne.svg" alt="...">
+            </figure>
+
+            <p>The <b>second iteration</b> faced the usability challenges that were still present. Specifically, I knew that the previous design did not properly follow the “Thumb Zone” rule, nor did it help that the navigation bars in dropdown menus were far too structurally small for someone to comfortably click them. 
+            </br></br>
+                At this stage, I referenced mobile apps like Uber to find better design components, like having a group of time options to select through, rather than a manually inputted time frame.
+            </br></br>
+                I also began to think about how some users may want other features, like handicap parking, and worked with other team members to integrate “tags” onto posts. These tags could then be filtered through a different selection addition on the filtering page, shown to the right of the image below.
+            </p>
+            <figure>
+                <img src ="images/psIterationTwo.svg" alt="...">
+            </figure>
+            
+            <h3>Results</h3>
+            <p>The initial challenge stemmed from the app’s lack of a proper faceted search system, which had significantly hindering usability. By identifying the key facets and creating an accessible structure to support them, I was able to design an effective filtration system for the prototype.
+            </br></br>
+            This design, alongside the addition of using tags throughout the app to describe other parking features, is expected to result in significantly lower user task completion times, and an increased flexibility in meeting user needs. Thus, the app is better positioned to receive <b>positive feedback in a System Usability Scale (SUS) </b> assessment.
+            </p>
+        </div>
+    </div>
+    <button id="scrollToTop" onclick="scrollToTop()">&#8679;</button>
+
+    <script>
+        window.onscroll = function() {
+            let button = document.getElementById("scrollToTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                button.style.display = "block"; // Show button after scrolling 300px
+            } else {
+                button.style.display = "none"; // Hide button when near the top
+            }
+        };
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        </script>
+        
+    <script>
+        function goToIndex(section) {
+            window.location.href = `index.html#${section}`;
+        }
+    </script>   
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/topbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Instrument+Sans' rel='stylesheet' type='text/css'>
+</head>
+<style>
+    h1 {
+     font-size: 2.488rem;
+    }
+    h2{
+     font-size: 2.074rem;
+    }
+    h3{
+     font-size: 1.728rem;
+    }
+    h4{
+     font-size: 1.44rem;
+    }
+    p{
+     font-size: 1rem;
+     line-height: 130%;
+    }
+</style>
+
+<body>
+    <div class="topBar">
+        <div class="options">
+            <button onclick="goToIndex('welcome')" style="cursor: pointer;"><p>welcome</p></button>
+            <button onclick="goToIndex('passion')" style="cursor: pointer;"><p>passion</p></button>
+            <button onclick="goToIndex('education')" style="cursor: pointer;"><p>education</p></button>
+            <button onclick="goToIndex('experience')" style="cursor: pointer;"><p>experience</p></button>
+            <button onclick="goToIndex('tools')" style="cursor: pointer;"><p>tools</p></button>
+        </div>
+    </div>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="images/Untitled design.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <div class="cases">
+        <button onclick="location.href='index.html';" style="cursor: pointer;"> ← Back Home </button>
+        <button id="rightButton" onclick="location.href='caseTwo.html';" style="cursor: pointer;"> Next Project → </button>
+
+        <div class="intro">
+            <div>
+                <h1>Michigan Digital Archives Client</h1>
+                <p><b>Redesigning a website from scratch.</b></p>
+            </div>
+            <div class="introInfo">
+                <ul>
+                    <li><b>Span:</b> February to April, 2025</li>
+                    <li><b>Status:</b> Ongoing!</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="solid">
+
+        <div class="problemStatement">
+            <h3>Problem Statement</h3>
+            <p>In response to unanimous feedback of the initial site having been confusing and cluttered, this real-world client has requested our team to redesign it’s website.</p>
+        </div>
+
+
+        <div class="teamClient">
+            <h3>Team: Four University of Michigan students.</h3>
+            <p>Michigan Open UX is a student-run group at the University of Michigan that offers a semester-long Associate’s Program. Each team consists of 3-4 UX students that partner with a real client requesting help. By the end of the semester, a final solution is then presented to the client.</p>
+            <h3>Client: A digital preservation organization.</h3>
+            <p>The Michigan Digital Preservation Network (MDPN) is a collaborative organization made to share digital preservation resources and materials.</p>
+        </div>
+
+        <hr class="solid">
+
+        <div class="texts">
+            <h3>Team Communication</h3>
+            <p>Our team first met with two MDPN members virtually to discuss the website’s history, situation, and user feedbacks. Accordingly, many users described feeling more confused than they were before they entered the website.
+            </br></br>While the site needed a revamp, the clients still had a structure and aesthetic in their head that they would like us to improve rather than change.
+            </br></br>To provide the most options to MDPN, our team decided to first each create their own wireframes and information architectures individually. After this, we would receive feedback from the clients to begin the shared prototype.
+        </p>
+            <h3>Understanding The Initial Site</h3>
+            <p>This was a fun, but challenging, wireframing process for me. To fully understand the challenge, let’s break it down:
+            </br></br>
+                <b>There was a lot of information.</b> Upon entering MDPN, I was quick to notice the heavy surplus of information stored across the site in a disorganized fashion. The untraditional sizing of components made it even more difficult to step through.
+            </br></br>                
+                <b>The navigation bar needed a change.</b> The navigation bar was quite, well, weird. Some sections like “About” and “Members” included vague sub-sections that simply went to entirely different pages. On top of this, hyperlinks were used so often, to the point that some paragraphs were appearing more blue than black.
+            </br></br>                
+                <b>Ambiguous wording was causing confusion.</b> Having two closely related concepts as different options was a common pattern in the site. It took some time for me to grasp the difference between the Governance section and the Members section, since both of these discussed active members of the organization.
+            </p>
+            <figure>
+                <img src ="images/testVector.svg" alt="...">
+            </figure>
+
+            <h3>My Wireframing Process</h3>
+            <p>It was clear that the team was struggling to stuff all of the information for users to know about, and it is understandable considering the amount of information on the site. To address this issue, I myself needed to backtrack and deeply research new ways to organize.
+            </br></br> 
+                <b>A local navigation design</b> was the first step to information organization. While an information architecture provided the general structure, we already had information to go with. Visually organizing this structure for users was a higher priority than jumping straight into moving pages around.
+            </br></br>
+                I began with the most cluttered page — Resources. From there, I designed a mock-up navigation bar that fully captured all of the information in the least stressful way possible. After researching and reviewing the core aspects of website navigation, I found myself inspired by the Oscar.com website, and utilized it’s <b>menu design.</b>
+            </p>
+            <figure>
+                <img src ="images/menuDesignMDPN.svg" alt="...">
+            </figure>
+
+             <p>
+                Only after this did information begin to get moved around. The <b>information architecture map shown below</b> was then created before continuing design.
+            </p>
+            <figure>
+                <img src ="images/iaMDPN.svg" alt="...">
+            </figure>
+
+            <p>In the original site, we had several different topics that all revolved back around “Who we are”, yet they were not in the About page. The Governance (or Committees) section itself was like a secondary About page. I combined these two pages together to create a more traditional approach, i.e where the user already expects something to be.
+            </br></br>
+                To further lower the cognitive load on users, I also maintained the initial breadcrumb navigation design, with some structural revision.
+            </br></br> 
+                <b>You can see the finalized wireframe below.</b> 
+            </p>
+            <div class="embeds">
+                <iframe style="border: 1px solid rgba(1, 1, 1, 1); box-shadow: 6px 6px 0px 0px #C4B2CF" width="800" height="400" src="https://embed.figma.com/design/s6N3CCm2deU64SoNrpmN9k/MCLS?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+            </div>
+            <p>
+                While I would have liked to additionally change some other things around, namely the “Technology” section, the client team wanted us to adhere to some of the original design. As is likely expected in any future UX profession -- I listen to the client and work with it.
+            </br></br>
+                The Technology page remained as it's own section, and kept most of it's original style. Resources, Members, News, and About were altered to ...
+            </p>
+            
+            <h3>Team Prototyping</h3>
+            <p>Under progress! This page will be updated accordingly.</p>
+        </div>
+    </div>
+    <button id="scrollToTop" onclick="scrollToTop()">&#8679;</button>
+
+    <script>
+        window.onscroll = function() {
+            let button = document.getElementById("scrollToTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                button.style.display = "block"; // Show button after scrolling 300px
+            } else {
+                button.style.display = "none"; // Hide button when near the top
+            }
+        };
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        </script>
+        
+    <script>
+        function goToIndex(section) {
+            window.location.href = `index.html#${section}`;
+        }
+    </script>  
+</body>
+</html>
